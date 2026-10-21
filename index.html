@@ -1,59 +1,198 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a0b0f" />
-  <meta name="description" content="Faraz Khan is a CMS Web Developer specializing in WordPress, Shopify, responsive websites, and ongoing website maintenance." />
-  <title>Faraz Khan | CMS Web Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{--bg:#0a0b0f;--panel:#111319;--panel2:#161820;--line:#2a2d36;--text:#f5f5f6;--muted:#a2a5b1;--mint:#c0f96b;--purple:#927dff;--radius:22px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.65;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--mint);color:#10110e}
-    .wrap{width:min(1160px,calc(100% - 48px));margin-inline:auto}.topline{height:3px;background:linear-gradient(90deg,var(--mint),var(--purple),transparent)}
-    header{position:sticky;top:0;z-index:100;background:rgba(10,11,15,.85);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(18px)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:700 25px 'Space Grotesk',sans-serif;letter-spacing:-1.2px}.brand span{color:var(--mint)}.navlinks{display:flex;gap:30px;align-items:center}.navlinks a{color:#c5c7d0;font-size:14px;transition:color .2s}.navlinks a:hover{color:var(--mint)}.nav-cta{border:1px solid #525660;padding:10px 17px;border-radius:100px!important;color:#fff!important}.nav-cta:hover{border-color:var(--mint)}.menu{display:none;background:transparent;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer}
-    .hero{min-height:735px;display:flex;align-items:center;position:relative;padding:100px 0 95px;overflow:hidden}.glow{position:absolute;width:570px;height:570px;right:-180px;top:0;background:radial-gradient(circle,rgba(145,125,255,.18),rgba(192,249,107,.05) 39%,transparent 68%);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:65px;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--mint);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px #c0f96b18}.hero h1{font:700 clamp(58px,7.5vw,103px)/.99 'Space Grotesk',sans-serif;letter-spacing:-6px;margin:25px 0}.hero h1 em{font-style:normal;color:var(--mint)}.hero-lead{font-size:21px;color:#dedfe5;max-width:580px;margin:0 0 17px}.hero-desc{font-size:16px;max-width:560px;color:var(--muted);margin:0 0 33px}.actions{display:flex;flex-wrap:wrap;gap:13px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:11px;padding:15px 23px;font-size:14px;font-weight:700;transition:transform .2s,background .2s,border-color .2s}.btn:hover{transform:translateY(-3px)}.btn.primary{background:var(--mint);color:#111509}.btn.outline{border:1px solid #474b57;color:#fff;background:#ffffff05}.btn.outline:hover{border-color:var(--mint)}.arrow{font-size:18px}.hero-small{margin-top:38px;display:flex;gap:25px;flex-wrap:wrap}.hero-small span{font-size:13px;color:var(--muted)}.hero-small b{display:block;font:700 25px 'Space Grotesk';color:#fff}
-    .visual{border:1px solid #343742;background:linear-gradient(148deg,#1c2028,#101218);border-radius:27px;padding:22px;transform:rotate(2deg);box-shadow:0 32px 80px #0008}.vtop{display:flex;gap:7px;border-bottom:1px solid #343840;padding-bottom:16px}.vtop i{width:9px;height:9px;border-radius:50%;background:#606570}.vtop i:first-child{background:#fa786c}.vtop i:nth-child(2){background:#ffd66f}.vtop i:nth-child(3){background:#bff96c}.terminal{font:500 13px/2.15 ui-monospace,SFMono-Regular,Consolas,monospace;padding:25px 8px 15px;color:#aaaebf}.terminal .green{color:var(--mint)}.terminal .purple{color:#ad9eff}.terminal .white{color:#eee}.vfooter{margin:22px 0 2px;background:#24282f;border-radius:13px;padding:21px;display:flex;align-items:center;gap:15px}.vicon{display:grid;place-items:center;width:50px;height:50px;border-radius:13px;color:#161919;background:var(--mint);font:700 26px 'Space Grotesk'}.vfooter strong{display:block;font-size:15px}.vfooter small{color:#b6bbc5}
-    .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#101218}.marquee-inner{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:26px 0}.marquee-label{font-size:12px;color:#9a9da7;text-transform:uppercase;letter-spacing:1px}.techs{display:flex;flex-wrap:wrap;gap:25px;color:#e7e8eb;font-family:'Space Grotesk';font-weight:600}
-    section{padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.kicker{font-size:12px;letter-spacing:2px;color:var(--mint);font-weight:700;text-transform:uppercase}.section-head h2,.big-title{font:700 clamp(34px,4.7vw,56px)/1.15 'Space Grotesk';letter-spacing:-2px;margin:12px 0 0}.section-sub{color:var(--muted);max-width:450px;font-size:15px}.line{height:1px;background:var(--line);margin:0 0 30px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:start}.about-copy{font-size:18px;color:#d3d5dc}.about-copy p{margin-top:0}.about-copy p+p{font-size:15px;color:var(--muted)}.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fact{padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.fact strong{font:700 27px 'Space Grotesk';display:block}.fact span{color:var(--muted);font-size:13px}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px;min-height:260px;transition:border-color .25s,transform .25s}.service:hover{border-color:#8fae5d;transform:translateY(-5px)}.service .num{color:var(--mint);font:600 13px 'Space Grotesk'}.service .symbol{font-size:34px;margin:22px 0 16px}.service h3{font:700 22px 'Space Grotesk';margin:0 0 12px}.service p{font-size:14px;color:var(--muted);margin:0}
-    #projects{background:#0e1015}.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.project{border:1px solid var(--line);border-radius:21px;overflow:hidden;background:var(--panel)}.preview{height:275px;padding:28px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.preview.one{background:linear-gradient(140deg,#2f3b37,#657961)}.preview.two{background:linear-gradient(140deg,#332f46,#756c9e)}.preview.three{background:linear-gradient(140deg,#263b47,#537e8a)}.preview.four{background:linear-gradient(140deg,#493a33,#a17d64)}.fake-browser{background:#f1f0eb;border-radius:12px;width:85%;height:190px;box-shadow:0 25px 50px #0004;transform:rotate(-3deg);overflow:hidden}.preview.two .fake-browser,.preview.four .fake-browser{transform:rotate(3deg)}.browser-bar{height:28px;background:#e1e2df;display:flex;gap:5px;align-items:center;padding:10px}.browser-bar i{height:6px;width:6px;border-radius:50%;background:#9ea3a2}.browser-content{padding:20px}.fake-line{height:12px;background:#303c42;border-radius:4px;width:70%;margin-bottom:12px}.fake-line.short{width:40%;height:8px;background:#a5b1ae}.fake-image{height:56px;background:linear-gradient(90deg,#8ea89b,#c6d2c5);margin-top:17px;border-radius:6px}.preview.two .fake-image{background:linear-gradient(90deg,#a79dbf,#d8d4e5)}.preview.three .fake-image{background:linear-gradient(90deg,#7dabb7,#d5e6e9)}.preview.four .fake-image{background:linear-gradient(90deg,#b58e74,#e1c6b3)}.placeholder{position:absolute;right:14px;bottom:15px;background:#1119;border:1px solid #ffffff3c;border-radius:100px;color:#fff;padding:5px 12px;font-size:11px}.project-meta{padding:25px 27px}.project-meta .type{color:var(--mint);text-transform:uppercase;letter-spacing:1.3px;font-size:11px;font-weight:700}.project-meta h3{font:700 22px 'Space Grotesk';margin:8px 0}.project-meta p{font-size:13px;color:var(--muted);margin:0}.project-note{font-size:13px;color:var(--muted);border-left:2px solid var(--mint);padding-left:14px;margin-top:25px}
-    .experience{display:grid;grid-template-columns:1fr 2fr;gap:55px;border-top:1px solid var(--line);padding:34px 0}.experience .date{color:var(--mint);font-weight:700;font-size:14px}.experience h3{font:700 25px 'Space Grotesk';margin:0 0 6px}.experience p{color:var(--muted);margin:0 0 12px}.experience ul{margin:0;padding-left:18px;color:#c3c6ce;font-size:14px}.experience li{margin:7px 0}.resume-strip{border-radius:22px;border:1px solid #4d583f;background:linear-gradient(110deg,#182119,#181a22);padding:33px;display:flex;align-items:center;justify-content:space-between;gap:20px}.resume-strip h3{font:700 25px 'Space Grotesk';margin:0 0 6px}.resume-strip p{color:#c0c6bd;margin:0;font-size:14px}
-    .contact{padding:98px 0;background:radial-gradient(ellipse at 50% 115%,#24351e 0%,#0d1010 55%,#0a0b0f 85%);text-align:center;border-top:1px solid var(--line)}.contact h2{font:700 clamp(47px,7vw,85px)/1.05 'Space Grotesk';letter-spacing:-4px;margin:20px auto;max-width:800px}.contact h2 span{color:var(--mint)}.contact p{color:var(--muted);max-width:550px;margin:0 auto 35px}.contact .actions{justify-content:center}.contact-details{margin-top:30px;color:#b0b4bc;font-size:14px}footer{border-top:1px solid var(--line);padding:25px 0;color:#a2a5ad;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner a:hover{color:var(--mint)}
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero{min-height:0}.visual{max-width:550px;transform:none}.services-grid{grid-template-columns:repeat(2,1fr)}.hero h1{letter-spacing:-3px}.about-grid{gap:30px}}@media(max-width:650px){.wrap{width:min(100% - 32px,1160px)}.nav{height:68px}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#13151c;border-bottom:1px solid var(--line);padding:20px 24px;flex-direction:column;align-items:flex-start;gap:19px}.navlinks.open{display:flex}.hero{padding:73px 0 70px}.hero h1{font-size:clamp(53px,13vw,78px);letter-spacing:-3.8px}.hero-lead{font-size:18px}.hero-small{gap:24px}.visual{padding:14px}.terminal{font-size:11px}.marquee-inner{align-items:flex-start;flex-direction:column}.techs{gap:13px 22px}section{padding:75px 0}.section-head{display:block}.section-sub{margin-top:18px}.about-grid,.services-grid,.projects-grid,.experience{grid-template-columns:1fr}.preview{height:225px}.fake-browser{height:165px}.experience{gap:10px}.resume-strip{align-items:flex-start;flex-direction:column}.contact{padding:75px 0}.contact h2{letter-spacing:-2.3px}.btn{padding:14px 17px}.footer-inner{flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.service{transition:none}}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1019"><meta name="description" content="Faraz Khan is a CMS Web Developer specializing in WordPress, Shopify, responsive design and ongoing website maintenance."><title>Faraz Khan — CMS Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090e16;--panel:#111a27;--panel2:#152133;--text:#edf3fd;--muted:#9baabe;--line:#273449;--accent:#90f0c2;--violet:#a5a2ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.7 'DM Sans',sans-serif}body:before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse 700px 450px at 89% 4%,#6175bd17,transparent 70%);z-index:-1}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}::selection{background:var(--accent);color:#09120f}.wrap{max-width:1190px;padding:0 32px;margin:auto}.top{position:sticky;top:0;z-index:30;background:#090e16ed;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff10}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font:700 23px 'Space Grotesk';letter-spacing:-1.2px}.logo span{color:var(--accent)}.menu{display:flex;align-items:center;gap:28px}.menu a{color:#c6d0df;font-size:13px;font-weight:700}.menu a:hover,.link:hover{color:var(--accent)}.pill{border:1px solid #b9f6db6b;border-radius:50px;padding:9px 17px!important;color:var(--accent)!important}.hamb{display:none;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:white;padding:7px 12px;font-size:21px}.hero{min-height:690px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:65px;padding-top:85px;padding-bottom:90px}.eyebrow,.micro{font-size:11px;text-transform:uppercase;letter-spacing:2.4px;font-weight:700;color:var(--accent)}.eyebrow:before{content:'';display:inline-block;height:8px;width:8px;border-radius:50%;background:var(--accent);margin-right:12px;box-shadow:0 0 15px var(--accent)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.055em;line-height:1.09}h1{font-size:clamp(54px,6.9vw,103px);margin:23px 0}h1 em{font-style:normal;color:var(--accent)}h2{font-size:clamp(37px,4.5vw,66px);margin:15px 0 22px}h3{font-size:21px;letter-spacing:-.045em;margin:0 0 11px}.lead{font-size:18px;max-width:540px;color:#adbccc}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:29px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:9px;font-weight:700;font-size:13px;border:1px solid var(--line);transition:.2s}.btn.primary{color:#09120f;background:var(--accent);border-color:var(--accent)}.btn:hover{transform:translateY(-3px)}.btn.ghost{background:#151f2b;color:#eef4fd}.hero-notes{display:flex;flex-wrap:wrap;gap:25px;margin-top:36px;color:var(--muted);font-size:12px}.hero-notes strong{display:block;color:white;font:700 22px 'Space Grotesk'}.showcase{position:relative}.glow{position:absolute;inset:16% -8%;background:#66e7b22a;filter:blur(78px);border-radius:50%}.workspace{position:relative;border:1px solid #40516a;background:linear-gradient(140deg,#192638,#0d1622);border-radius:18px;padding:15px;box-shadow:0 45px 90px #0009;transform:rotate(2deg)}.workspace .bar{display:flex;gap:6px;border-bottom:1px solid #ffffff18;padding:5px 0 14px}.dot{width:8px;height:8px;border-radius:100%;background:#52617a}.dot:first-child{background:#ff8b86}.dot:nth-child(2){background:#f7d47b}.dot:nth-child(3){background:#88e9ac}.codebox{padding:26px 18px 14px;font:14px/2 monospace;color:#b5c9df}.codebox .green{color:var(--accent)}.codebox .purple{color:#b4a7ff}.codebox .gray{color:#63788f}.statfloat{position:absolute;right:-22px;bottom:-30px;border:1px solid #3b564b;background:#172e2a;border-radius:13px;padding:15px 23px;color:var(--accent);box-shadow:0 18px 35px #0007;font-size:13px;font-weight:700}.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0e1520}.striprow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:24px 0}.striprow span{font:700 15px 'Space Grotesk';color:#8e9eb1}.striprow span:first-child{font:600 11px 'DM Sans';letter-spacing:1.8px;color:var(--accent);text-transform:uppercase}.section{padding-top:105px;padding-bottom:105px}.sectionhead{max-width:690px;margin-bottom:45px}.muted{color:var(--muted)}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.aboutcopy{font-size:17px;color:#b4c2d2}.abouttiles{display:grid;grid-template-columns:1fr 1fr;gap:15px}.tile,.service,.project,.timeline,.contactpanel{border:1px solid var(--line);background:linear-gradient(140deg,#141e2c,#0e1621);border-radius:16px}.tile{padding:28px 21px}.tile strong{display:block;font:700 31px 'Space Grotesk';color:#fff}.tile small{color:var(--muted)}.servicegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service{padding:30px;transition:.25s}.service:hover,.project:hover{border-color:#6fb89b;transform:translateY(-4px)}.service .symbol{font-size:28px;color:var(--accent);margin-bottom:24px}.service p{color:var(--muted);font-size:14px;margin:0}.projectsbg{background:#0d1420;border-top:1px solid #ffffff0d;border-bottom:1px solid #ffffff0d}.filterbar{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0 31px}.filter{border:1px solid var(--line);background:#152031;color:#a5b5c7;border-radius:50px;padding:9px 19px;font-size:12px;font-weight:700}.filter[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#09150f}.projectgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.project{overflow:hidden;transition:.2s}.project[hidden]{display:none!important}.preview{height:260px;overflow:hidden;padding:34px;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(ellipse at 65% 10%,#2d4c61,#142234 62%,#101927);border-bottom:1px solid #ffffff15}.preview.shop{background:radial-gradient(ellipse at 25% 8%,#4c3f6b,#201d36 65%,#171829)}.preview.maint{background:radial-gradient(ellipse at 60% 10%,#3b5e48,#162a25 65%,#14201d)}.fakebrowser{max-width:380px;width:100%;height:190px;border-radius:10px 10px 0 0;background:#f6f8f9;transform:rotate(-5deg) translateY(21px);box-shadow:0 22px 40px #0008;overflow:hidden}.shop .fakebrowser{transform:rotate(5deg) translateY(21px)}.browserbar{height:20px;background:#dfe6ed;padding:7px 11px;display:flex;gap:4px}.browserbar i{width:6px;height:6px;border-radius:50%;background:#90a0ad}.browserbody{display:grid;grid-template-columns:38% 1fr;gap:15px;padding:17px}.browserart{height:140px;border-radius:6px;background:linear-gradient(145deg,#90b9aa,#355b70)}.shop .browserart{background:linear-gradient(145deg,#dab6bf,#8c668e)}.maint .browserart{background:linear-gradient(145deg,#c2dbc2,#548472)}.skeleton{height:9px;background:#c7d1d9;border-radius:30px;margin-bottom:9px}.skeleton.wide{width:95%;height:17px;background:#829dab;margin-top:12px}.skeleton.short{width:55%}.browserbtn{margin-top:20px;background:#253b4f;height:20px;width:83px;border-radius:3px}.previewtag{position:absolute;top:18px;left:18px;border:1px solid #ffffff5e;border-radius:50px;padding:5px 12px;color:white;background:#0007;font-size:10px;letter-spacing:1px;text-transform:uppercase}.projectinfo{padding:25px}.projectinfo p{font-size:14px;color:var(--muted);margin-bottom:17px}.projectmeta{display:flex;justify-content:space-between;gap:15px;align-items:center}.tag{color:var(--accent);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px}.visit{font-size:13px;font-weight:700;color:var(--accent)}.visit.off{color:#7b8a9a;cursor:default}.notice{color:#8799ac;font-size:12px;margin-top:20px}.experiencegrid{display:grid;grid-template-columns:1.35fr .65fr;gap:20px}.timeline{padding:33px}.when{font-size:12px;color:var(--accent);letter-spacing:1px;font-weight:700}.timeline ul{padding-left:19px;color:#b4c2d2}.timeline li{margin:9px 0}.edu{display:grid;gap:20px}.edu .timeline{padding:25px}.contactpanel{padding:55px;background:radial-gradient(ellipse at 80% 0%,#2c5a4f66,transparent 65%),#111c28;display:flex;align-items:center;justify-content:space-between;gap:30px}.contactpanel h2{max-width:590px}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.footrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.reveal.seen{opacity:1;transform:none}
+@media(max-width:880px){.hero,.aboutgrid,.experiencegrid{grid-template-columns:1fr}.hero{gap:60px;min-height:0}.showcase{max-width:560px;width:90%;margin:auto}.servicegrid{grid-template-columns:repeat(2,1fr)}.menu{gap:13px}.menu a{font-size:12px}}@media(max-width:650px){.wrap{padding:0 20px}.nav{height:66px}.hamb{display:block}.menu{display:none;position:absolute;top:65px;left:0;right:0;flex-direction:column;align-items:stretch;padding:17px 22px;background:#111a27;border-bottom:1px solid var(--line)}.menu.open{display:flex}.hero{padding-top:60px;padding-bottom:75px}.hero h1{font-size:57px}.hero .lead{font-size:16px}.hero-notes{gap:20px}.showcase{width:94%}.codebox{font-size:11px;padding:17px 3px}.workspace{padding:11px}.statfloat{right:-6px;bottom:-22px}.section{padding-top:75px;padding-bottom:75px}.servicegrid,.projectgrid{grid-template-columns:1fr}.preview{height:235px}.abouttiles{gap:9px}.tile{padding:20px 15px}.contactpanel{padding:31px;display:block}.contactpanel .actions{margin-top:20px}h2{font-size:42px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+/* Real website cards */
+.site-preview{height:260px;display:block;position:relative;overflow:hidden;background:#202c39;border-bottom:1px solid #ffffff21;isolation:isolate}
+.preview-fallback{position:absolute;inset:0;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;background:radial-gradient(ellipse at 75% 0%,#325e5e,transparent 62%),linear-gradient(145deg,#1a3341,#101924);color:white}
+.site-preview.shop .preview-fallback{background:radial-gradient(ellipse at 72% 0%,#5c4472,transparent 60%),linear-gradient(145deg,#2c2944,#131a27)}
+.preview-domain{position:absolute;top:28px;left:34px;font-size:12px;color:#d5e9e3;letter-spacing:1px}.preview-name{font:700 clamp(24px,2.4vw,35px)/1.08 'Space Grotesk',sans-serif;max-width:80%;letter-spacing:-1.3px}.preview-type{color:#b8d4d3;font-size:10px;letter-spacing:2px;margin-top:15px}
+.site-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .6s ease;background:#ecf0f2}
+.project:hover .site-preview img{transform:scale(1.035)}
+.screen-tag,.screen-arrow{position:absolute;z-index:2;background:#0b1422d9;border:1px solid #ffffff40;color:white;border-radius:30px;padding:6px 13px;font-size:11px;font-weight:700;backdrop-filter:blur(10px)}.screen-tag{left:17px;top:17px}.screen-arrow{right:17px;bottom:17px;font-size:18px;padding:2px 12px}
+.project-domain{font-size:12px;color:#8fa1b7;overflow-wrap:anywhere}.projectinfo{min-height:197px;display:flex;flex-direction:column}.projectinfo p{flex:1}.projectmeta{border-top:1px solid #ffffff14;padding-top:14px}.project{box-shadow:0 16px 44px #00000021}.filterbar{margin-top:30px;margin-bottom:35px}.sectionhead{max-width:790px}.projectgrid{row-gap:24px}
+@media(max-width:650px){.site-preview{height:210px}.projectinfo{min-height:0}.preview-name{font-size:28px}}
+</style>
 </head>
 <body>
-  <div class="topline"></div>
-  <header>
-    <div class="wrap nav"><a href="#home" class="brand" aria-label="Faraz Khan home">faraz<span>.</span>dev</a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button><nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#services">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact" class="nav-cta">Let's talk ↗</a></nav></div>
-  </header>
-  <main>
-    <div class="hero" id="home"><div class="glow"></div><div class="wrap hero-grid"><div class="reveal"><div class="eyebrow"><span class="dot"></span> CMS WEB DEVELOPER · KARACHI, PAKISTAN</div><h1>Hi, I'm<br><em>Faraz Khan.</em></h1><p class="hero-lead">I build, customize and maintain websites that work beautifully.</p><p class="hero-desc">WordPress and Shopify are my core focus, with hands-on experience across Wix, Squarespace and Webflow. From responsive layouts to ongoing site support, I help keep websites looking good and running smoothly.</p><div class="actions"><a class="btn primary" href="#projects">Explore my work <span class="arrow">↗</span></a><a class="btn outline" href="Faraz_Khan_CV.pdf" download>Download CV ↓</a></div><div class="hero-small"><span><b>3 years</b>CMS development experience</span><span><b>5 platforms</b>CMS experience</span></div></div><div class="visual reveal" aria-label="Decorative code preview"><div class="vtop"><i></i><i></i><i></i></div><div class="terminal"><div><span class="purple">const</span> <span class="white">developer</span> = {</div><div>&nbsp; name: <span class="green">"Faraz Khan"</span>,</div><div>&nbsp; focus: [<span class="green">"WordPress"</span>, <span class="green">"Shopify"</span>],</div><div>&nbsp; expertise: <span class="green">"CMS Development"</span>,</div><div>&nbsp; specialties: [</div><div>&nbsp;&nbsp; <span class="green">"Responsive Websites"</span>,</div><div>&nbsp;&nbsp; <span class="green">"Maintenance"</span>,</div><div>&nbsp;&nbsp; <span class="green">"Technical SEO"</span></div><div>&nbsp; ]</div><div>};</div></div><div class="vfooter"><div class="vicon">&lt;/&gt;</div><div><strong>Crafted for the web</strong><small>Clean. Responsive. Maintainable.</small></div></div></div></div></div>
-    <div class="marquee"><div class="wrap marquee-inner"><span class="marquee-label">Platforms I work with</span><div class="techs"><span>WordPress</span><span>Shopify</span><span>Wix</span><span>Squarespace</span><span>Webflow</span></div></div></div>
-    <section id="about"><div class="wrap"><div class="section-head reveal"><div><span class="kicker">01 / About me</span><h2>More than just<br>building pages.</h2></div><p class="section-sub">Practical development, thoughtful design and reliable website support.</p></div><div class="line"></div><div class="about-grid"><div class="about-copy reveal"><p>I'm Faraz, a CMS Web Developer based in Karachi with three years of professional experience at SEObee.</p><p>My work covers website design and updates, page layouts, responsive styling, troubleshooting and ongoing maintenance. I also implement on-page and technical SEO improvements as part of website development.</p><p>I work primarily with WordPress and Shopify, with additional experience using Wix, Squarespace and Webflow.</p></div><div class="fact-grid reveal"><div class="fact"><strong>2023–26</strong><span>Experience at SEObee</span></div><div class="fact"><strong>5</strong><span>CMS platforms</span></div><div class="fact"><strong>SEO</strong><span>On-page & technical</span></div><div class="fact"><strong>Aptech</strong><span>One-year training</span></div></div></div></div></section>
-    <section id="services" style="padding-top:20px"><div class="wrap"><div class="section-head reveal"><div><span class="kicker">02 / What I do</span><h2>My expertise.</h2></div><p class="section-sub">Website development, everyday improvements and long-term upkeep.</p></div><div class="services-grid"><article class="service reveal"><span class="num">01 /</span><div class="symbol">◈</div><h3>WordPress Development</h3><p>CMS website builds, page layouts, responsive styling, content updates and customization.</p></article><article class="service reveal"><span class="num">02 /</span><div class="symbol">▧</div><h3>Shopify Development</h3><p>Storefront page updates, layout improvements, styling and ongoing Shopify website support.</p></article><article class="service reveal"><span class="num">03 /</span><div class="symbol">⚙</div><h3>Website Maintenance</h3><p>Routine updates, troubleshooting, content changes, layout fixes and responsive improvements.</p></article><article class="service reveal"><span class="num">04 /</span><div class="symbol">↗</div><h3>On-Page & Technical SEO</h3><p>Implementing practical SEO improvements during website development and maintenance.</p></article><article class="service reveal"><span class="num">05 /</span><div class="symbol">▤</div><h3>Other CMS Platforms</h3><p>Website design and content updates in Wix, Squarespace and Webflow.</p></article><article class="service reveal"><span class="num">06 /</span><div class="symbol">◇</div><h3>Responsive Web Design</h3><p>Layouts and styling that adapt cleanly across desktop, tablet and mobile screens.</p></article></div></div></section>
-    <section id="projects"><div class="wrap"><div class="section-head reveal"><div><span class="kicker">03 / Selected work</span><h2>Projects & websites.</h2></div><p class="section-sub">A dedicated home for my WordPress, Shopify and maintenance projects.</p></div><div class="projects-grid">
-      <!-- REPLACE: Update these sample cards with your real project names, screenshots and URLs later. -->
-      <article class="project reveal"><div class="preview one"><div class="fake-browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-content"><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-image"></div></div></div><span class="placeholder">Preview illustration</span></div><div class="project-meta"><span class="type">WordPress · Placeholder</span><h3>WordPress Website Project</h3><p>Project name, live link and details will be added soon.</p></div></article>
-      <article class="project reveal"><div class="preview two"><div class="fake-browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-content"><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-image"></div></div></div><span class="placeholder">Preview illustration</span></div><div class="project-meta"><span class="type">Shopify · Placeholder</span><h3>Shopify Store Project</h3><p>Project name, live link and details will be added soon.</p></div></article>
-      <article class="project reveal"><div class="preview three"><div class="fake-browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-content"><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-image"></div></div></div><span class="placeholder">Preview illustration</span></div><div class="project-meta"><span class="type">WordPress · Placeholder</span><h3>Business Website Project</h3><p>Project name, live link and details will be added soon.</p></div></article>
-      <article class="project reveal"><div class="preview four"><div class="fake-browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-content"><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-image"></div></div></div><span class="placeholder">Preview illustration</span></div><div class="project-meta"><span class="type">Maintenance · Placeholder</span><h3>Website Support Project</h3><p>Maintenance scope and website link will be added soon.</p></div></article>
-      </div><p class="project-note reveal">Project previews are design placeholders, not screenshots of completed client work. Real website links and project details can be added here later.</p></div></section>
-    <section id="experience"><div class="wrap"><div class="section-head reveal"><div><span class="kicker">04 / My background</span><h2>Experience & training.</h2></div></div><div class="experience reveal"><div class="date">2023 – 2026</div><div><h3>CMS Web Developer</h3><p>SEObee</p><ul><li>Developed and maintained WordPress and Shopify websites.</li><li>Built and updated websites using Wix, Squarespace and Webflow.</li><li>Handled content, page layouts, styling, responsive fixes and troubleshooting.</li><li>Implemented on-page and technical SEO improvements.</li></ul></div></div><div class="experience reveal"><div class="date">Professional training</div><div><h3>Aptech</h3><p>One-Year Course</p></div></div><div class="experience reveal"><div class="date">Education</div><div><h3>Intermediate</h3><p>Government Islamia Arts & Commerce College, Karachi</p></div></div><div class="resume-strip reveal"><div><h3>Want the full picture?</h3><p>View my experience, skills and training in my resume.</p></div><a class="btn primary" href="Faraz_Khan_CV.pdf" download>Download my CV ↓</a></div></div></section>
-    <section class="contact" id="contact"><div class="wrap reveal"><div class="kicker">05 / Get in touch</div><h2>Have a website<br>in <span>mind?</span></h2><p>Need help with a WordPress site, Shopify storefront or ongoing website maintenance? I'd be glad to hear about it.</p><div class="actions"><a href="mailto:farazkhan.2022@gmail.com" class="btn primary">Email me ↗</a><a href="https://github.com/farazkha2022-design" target="_blank" rel="noopener noreferrer" class="btn outline">My GitHub ↗</a></div><div class="contact-details">farazkhan.2022@gmail.com · Karachi, Pakistan</div></div></section>
-  </main>
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Faraz Khan. Built with care.</span><span><a href="#home">Back to top ↑</a></span></div></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle=document.querySelector('.menu'),nav=document.querySelector('.navlinks');
-    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
-    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
-    if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
-  </script>
-</body>
-</html>
+<header class="top"><div class="wrap nav"><a href="#home" class="logo">faraz<span>.</span>dev</a><button class="hamb" id="hamb" aria-label="Toggle menu" aria-expanded="false">☰</button><nav class="menu" id="menu" aria-label="Main menu"><a href="#about">About</a><a href="#services">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact" class="pill">Let's talk ↗</a></nav></div></header>
+<main><section id="home" class="wrap hero"><div><div class="eyebrow">CMS WEB DEVELOPER · KARACHI, PAKISTAN</div><h1>Making the web<br><em>work better.</em></h1><p class="lead">Hi, I'm <strong style="color:#fff">Faraz Khan</strong>. I build, customize and maintain reliable WordPress and Shopify websites, with a focus on clean layouts, smooth experiences and ongoing support.</p><div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn ghost" href="Faraz_Khan_CV.pdf" download>Download CV ↓</a></div><div class="hero-notes"><span><strong>3 years</strong> CMS development</span><span><strong>5 platforms</strong> Hands-on experience</span><span><strong>2023–2026</strong> SEObee</span></div></div><div class="showcase"><div class="glow"></div><div class="workspace" aria-label="Developer code illustration"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="codebox"><div><span class="purple">const</span> developer = {</div><div>&nbsp; name: <span class="green">"Faraz Khan"</span>,</div><div>&nbsp; focus: [<span class="green">"WordPress"</span>, <span class="green">"Shopify"</span>],</div><div>&nbsp; expertise: <span class="green">"CMS Development"</span>,</div><div>&nbsp; work: {</div><div>&nbsp;&nbsp; development: <span class="purple">true</span>,</div><div>&nbsp;&nbsp; maintenance: <span class="purple">true</span>,</div><div>&nbsp;&nbsp; responsive: <span class="purple">true</span></div><div>&nbsp; }</div><div>};</div><div class="gray">// Let's build something better.</div></div></div><div class="statfloat">● Available for projects</div></div></section>
+<div class="strip"><div class="wrap striprow"><span>Platforms I work with</span><span>WordPress</span><span>Shopify</span><span>Wix</span><span>Squarespace</span><span>Webflow</span></div></div>
+<section id="about" class="wrap section"><div class="aboutgrid"><div class="reveal"><span class="micro">01 / ABOUT ME</span><h2>Thoughtful design.<br>Dependable development.</h2><div class="aboutcopy"><p>I'm a CMS Web Developer based in Karachi, with three years of experience at SEObee. Most of my work is focused on WordPress and Shopify websites.</p><p>From building responsive pages and improving existing layouts to solving site issues and handling regular updates, I care about the details that make a website easier to use and manage.</p><p>I also have experience with Wix, Squarespace, Webflow and practical on-page and technical SEO implementation.</p></div></div><div class="abouttiles reveal"><div class="tile"><strong>03</strong><small>Years of experience</small></div><div class="tile"><strong>05</strong><small>CMS platforms</small></div><div class="tile"><strong>SEO</strong><small>On-page & technical</small></div><div class="tile"><strong>CMS</strong><small>Build, update & maintain</small></div></div></div></section>
+<section id="services" class="wrap section" style="padding-top:15px"><div class="sectionhead reveal"><span class="micro">02 / EXPERTISE</span><h2>What I can do for you.</h2><p class="muted">From launching pages to keeping established websites running well.</p></div><div class="servicegrid"><article class="service reveal"><div class="symbol">◈</div><h3>WordPress Development</h3><p>Responsive website layouts, page development, CMS updates, visual customization and content management.</p></article><article class="service reveal"><div class="symbol">▤</div><h3>Shopify Development</h3><p>Storefront pages, theme styling, layout customization, e-commerce content and website updates.</p></article><article class="service reveal"><div class="symbol">⚙</div><h3>Website Maintenance</h3><p>Routine changes, troubleshooting, content updates, visual fixes and ongoing website support.</p></article><article class="service reveal"><div class="symbol">↗</div><h3>Technical & On-page SEO</h3><p>Practical SEO implementation during development, including page-level and technical improvements.</p></article><article class="service reveal"><div class="symbol">▦</div><h3>Other CMS Platforms</h3><p>Website design, styling and content updates across Wix, Squarespace and Webflow.</p></article><article class="service reveal"><div class="symbol">◇</div><h3>Responsive Web Design</h3><p>Clean interfaces that work across mobile, tablet and desktop screen sizes.</p></article></div></section>
+<section id="projects" class="projectsbg"><div class="wrap section"><div class="sectionhead reveal"><span class="micro">03 / PORTFOLIO</span><h2>Projects &amp; websites<span style="color:var(--accent)">.</span></h2><p class="muted">Explore 24 websites across WordPress and Shopify. Filter by platform and visit each live site. Website maintenance and ongoing support are part of my broader expertise.</p></div><div class="filterbar" role="group" aria-label="Filter projects"><button class="filter" data-filter="all" aria-pressed="true">All projects (24)</button><button class="filter" data-filter="wordpress" aria-pressed="false">WordPress (19)</button><button class="filter" data-filter="shopify" aria-pressed="false">Shopify (5)</button></div><div class="projectgrid" id="projectGrid"></div><p class="notice">24 linked websites: 19 WordPress and 5 Shopify. Previews are retrieved from a third-party website thumbnail service and may load slowly or be unavailable. In those cases, each card displays a branded preview instead. Project descriptions summarize the sites, not a detailed breakdown of personal contributions.</p></div></section>
+<section id="experience" class="wrap section"><div class="sectionhead reveal"><span class="micro">04 / BACKGROUND</span><h2>Experience & training.</h2></div><div class="experiencegrid"><div class="timeline reveal"><span class="when">2023 — 2026</span><h3 style="font-size:30px;margin-top:12px">CMS Web Developer</h3><div class="tag">SEObee</div><ul><li>Developed and maintained websites using WordPress and Shopify.</li><li>Built and updated websites using Wix, Squarespace and Webflow.</li><li>Worked on content, responsive styling, layout updates and troubleshooting.</li><li>Implemented on-page and technical SEO improvements.</li></ul></div><div class="edu"><div class="timeline reveal"><span class="when">PROFESSIONAL TRAINING</span><h3 style="margin-top:10px">Aptech</h3><div class="muted">One-Year Course</div></div><div class="timeline reveal"><span class="when">EDUCATION</span><h3 style="margin-top:10px">Intermediate</h3><div class="muted">Government Islamia Arts & Commerce College, Karachi</div></div></div></div></section>
+<section id="contact" class="wrap section" style="padding-top:5px"><div class="contactpanel reveal"><div><span class="micro">05 / LET'S CONNECT</span><h2>Have a website<br>in mind?</h2><p class="muted" style="max-width:500px;margin:0">Need WordPress development, Shopify updates or dependable maintenance support? Let's talk about your project.</p><div class="actions"><a class="btn primary" href="mailto:farazkhan.2022@gmail.com">Email me ↗</a><a class="btn ghost" href="https://github.com/farazkha2022-design" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><a class="btn ghost" href="Faraz_Khan_CV.pdf" download>Download Resume ↓</a></div></section></main><footer class="footer"><div class="wrap footrow"><span>© <span id="year"></span> Faraz Khan. Designed with care.</span><span>Karachi, Pakistan · <a class="link" href="mailto:farazkhan.2022@gmail.com">farazkhan.2022@gmail.com</a></span><a class="link" href="#home">Back to top ↑</a></div></footer>
+<script>
+/* PROJECT LIST — edit a title, description or link here to update a card. */
+const PROJECTS = [
+  {
+    "title": "KUB Designs",
+    "type": "wordpress",
+    "description": "Fashion & textile brand website",
+    "url": "https://kubdesigns.com"
+  },
+  {
+    "title": "Stamford Electrical",
+    "type": "wordpress",
+    "description": "Electrical services website",
+    "url": "https://stamfordelectrical.ie"
+  },
+  {
+    "title": "MedLife MBS",
+    "type": "wordpress",
+    "description": "Medical billing website",
+    "url": "https://medlifembs.com"
+  },
+  {
+    "title": "Right HR Solutions",
+    "type": "wordpress",
+    "description": "Human resources website",
+    "url": "https://righthrsolutions.com"
+  },
+  {
+    "title": "Notary Plus More",
+    "type": "wordpress",
+    "description": "Notary and document services website",
+    "url": "https://notaryplusmore.com"
+  },
+  {
+    "title": "Privatint",
+    "type": "wordpress",
+    "description": "Business website",
+    "url": "https://privatint.seoblink.com"
+  },
+  {
+    "title": "Eating Dynamiks & Therapy",
+    "type": "wordpress",
+    "description": "Therapy and wellness website",
+    "url": "https://eatingdynamiksandtherapy.com"
+  },
+  {
+    "title": "Remote Source",
+    "type": "wordpress",
+    "description": "Remote staffing website",
+    "url": "https://www.remotesource.net"
+  },
+  {
+    "title": "Emergency Signal",
+    "type": "wordpress",
+    "description": "Emergency services website",
+    "url": "https://emergencysignal.net"
+  },
+  {
+    "title": "Dr. Anesh K",
+    "type": "wordpress",
+    "description": "Healthcare professional website",
+    "url": "https://draneshk.com"
+  },
+  {
+    "title": "RPM Response",
+    "type": "wordpress",
+    "description": "Business services website",
+    "url": "https://rpmresponse.com"
+  },
+  {
+    "title": "Horizon Windows",
+    "type": "wordpress",
+    "description": "Windows and doors website",
+    "url": "https://horizonwindows.ie"
+  },
+  {
+    "title": "Horizon Bespoke Joinery",
+    "type": "wordpress",
+    "description": "Custom joinery website",
+    "url": "https://horizonbespokejoinery.ie"
+  },
+  {
+    "title": "Tax Accounting Hub",
+    "type": "wordpress",
+    "description": "Accounting services website",
+    "url": "https://taxaccountinghub.com"
+  },
+  {
+    "title": "Online Pharmacy",
+    "type": "wordpress",
+    "description": "Online pharmacy website",
+    "url": "https://onlinepharmacy.pk"
+  },
+  {
+    "title": "The HR Boutique",
+    "type": "wordpress",
+    "description": "Human resources website",
+    "url": "https://thehrboutique.info"
+  },
+  {
+    "title": "Prime Vascular",
+    "type": "wordpress",
+    "description": "Vascular healthcare website",
+    "url": "https://pvcdoc.com"
+  },
+  {
+    "title": "My Vascu Health",
+    "type": "wordpress",
+    "description": "Vascular healthcare website",
+    "url": "https://myvascuhealth.com"
+  },
+  {
+    "title": "Dietitian Fainah",
+    "type": "wordpress",
+    "description": "Nutrition and dietetics website",
+    "url": "https://dietitianfainah.com"
+  },
+  {
+    "title": "Cedar Creek Furniture",
+    "type": "shopify",
+    "description": "Rustic furniture online store",
+    "url": "https://cedarcreekfurniture.com"
+  },
+  {
+    "title": "Balboa Gold",
+    "type": "shopify",
+    "description": "Online retail storefront",
+    "url": "https://balboagold.com"
+  },
+  {
+    "title": "Vive Health",
+    "type": "shopify",
+    "description": "Health and wellness products store",
+    "url": "https://vivehealth.com"
+  },
+  {
+    "title": "Duonamic",
+    "type": "shopify",
+    "description": "Portable fitness equipment store",
+    "url": "https://duonamic.com"
+  },
+  {
+    "title": "Royal Chrono Store",
+    "type": "shopify",
+    "description": "Watches and accessories store",
+    "url": "https://royalchronostore.com"
+  }
+];
+const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shot=url=>'https://s.wordpress.com/mshots/v1/'+encodeURIComponent(url)+'?w=900';
+function drawProjects(){
+  const grid=document.querySelector('#projectGrid');
+  grid.innerHTML=PROJECTS.map((p,i)=>{
+    const isShop=p.type==='shopify';
+    const domain=new URL(p.url).hostname.replace(/^www\./,'');
+    return `<article class="project" data-type="${p.type}">
+      <a class="site-preview ${isShop?'shop':''}" href="${safe(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${safe(p.title)} website">
+        <div class="preview-fallback"><span class="preview-domain">${safe(domain)}</span><span class="preview-name">${safe(p.title)}</span><span class="preview-type">${isShop?'E-COMMERCE / SHOPIFY':'WEB DESIGN / WORDPRESS'}</span></div>
+        <img src="${safe(shot(p.url))}" alt="Website preview for ${safe(p.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.style.display='none'" />
+        <span class="screen-tag">${isShop?'Shopify':'WordPress'}</span><span class="screen-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="projectinfo"><div class="tag" style="margin-bottom:10px">${isShop?'SHOPIFY STORE':'WORDPRESS WEBSITE'} · ${String(i+1).padStart(2,'0')}</div><h3>${safe(p.title)}</h3><p>${safe(p.description)}</p>
+        <div class="projectmeta"><span class="project-domain">${safe(domain)}</span><a class="visit" href="${safe(p.url)}" target="_blank" rel="noopener noreferrer">Visit Website ↗</a></div>
+      </div></article>`;
+  }).join('');
+}
+drawProjects();document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('.project').forEach(card=>card.hidden=b.dataset.filter!=='all'&&card.dataset.type!==b.dataset.filter)}));document.querySelector('#year').textContent=new Date().getFullYear();const menu=document.querySelector('#menu');document.querySelector('#hamb').addEventListener('click',e=>{const open=menu.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');document.querySelector('#hamb').setAttribute('aria-expanded','false')}));if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');observer.unobserve(e.target)}}),{threshold:.07});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('seen'));
+</script></body></html>
